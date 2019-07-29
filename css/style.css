@@ -1,0 +1,743 @@
+
+@font-face {
+	font-family: "Sketch Block";
+	src: url("./fonts/sketch-block/dahot2.Sketch_Block.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: url("./fonts/raleway/Raleway-Medium.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: "HVD Comic Serif Pro";
+	src: url("./fonts/HVD-Comic-Serif-Pro/HVD_Comic_Serif_Pro.otf") format('opentype');
+}
+
+@font-face {
+	font-family: "norwester";
+	src: url("./fonts/norwester/norwester.otf") format('opentype');
+}
+
+html {
+	font-size: 62.5%;	/* 1 rem is now 62.5% of 16px (browser default); 1rem ~= 10px*/
+}
+
+html * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Raleway, serif;
+	font-size: 1.5em; /* Body font size approx. 14px */
+	background-color: white;
+	color: #595959;
+}
+
+h1 {
+	font-family: "Sketch Block", serif;	
+	font-size: 4.1em;	
+	font-weight: bold;
+	color: #FF5B35;	
+	text-align: center;
+}
+
+h2 {
+	font-family: "HVD Comic Serif Pro", serif;
+	font-size: 1.85em;
+	color: #346094;
+	text-align: center;
+}
+
+li {
+	/*list-style-type: none;*/
+	list-style-position: inside;
+}
+
+.clearfix::after
+{
+	content: "";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
+}
+
+.float-left {
+  float: left; 
+}
+
+.float-right {
+  float: right; 
+}
+
+.badges {
+	text-align: center;
+}
+
+.badges > * {
+	display: inline-block;
+}
+
+.character-container {
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.character-container > img {
+	position: absolute;
+	top: 42px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.description {
+	padding: 0 20px;
+	color: #1c1c1c;
+	line-height: 1.86em;
+}
+
+#wrapper {
+	/*margin: 20px 0 10px;*/
+}
+
+#header {
+	margin-bottom: 40px;
+	padding: 20px 20px 20px;
+	z-index: 1;
+}
+	#header .logo:hover {
+		transform: scale(1.2);
+		transition-duration: 0.4s;
+	}
+
+	#menu-open,
+	#menu-close {
+		filter: invert(47%) sepia(9%) saturate(2785%) hue-rotate(124deg) brightness(102%) contrast(96%);
+	}
+
+	#menu-open:hover,
+	#menu-close:hover {
+		transform: scale(1.2);
+		transition-duration: 0.4s;
+	}
+
+	#menu-open {
+		display: block;
+		/*color: #1E988A;*/
+		/*z-index: 10;*/
+	}
+
+	#main-menu-container {
+		/*display: none;*/
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		z-index: 1;
+		overflow: hidden;
+		opacity: 0;
+		transition: height 0.5s, opacity 0.5s;
+		background-image: url(../images/bg-menu.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	#main-menu-container.show {
+		height: 100%;
+		opacity: 1;
+	}
+
+	#main-menu-container.show #menu-close {
+		filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+	}
+
+	#main-menu-container.show #menu-close > img {
+		filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+	}
+
+	#main-menu-container li {
+		list-style-type: none;
+	}
+
+	#main-menu-container .header {
+		margin-bottom: 26px;
+		padding: 20px 20px 20px;
+	}
+
+	#main-nav {
+		margin-bottom: 70px;
+		text-align: center;
+	}
+
+	#main-nav li {
+		margin-bottom: 26px;
+	}
+
+	#main-nav a {
+		font-family: "HVD Comic Serif Pro", serif;
+		text-decoration: none;
+		color: white;
+		font-size: 1.85em;
+		line-height: 2em;
+	}
+
+	#main-menu-container .badges {
+		margin-bottom: 39px;
+	}
+
+	#main-menu-container .social-icons {
+		position: fixed;
+		left: 20px;
+		bottom: 10px;
+	}
+
+	#main-menu-container .social-icons li {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	#main-menu-container .social-icons li > a > img {
+		border-radius: 50%;
+		padding: 9px;
+		background-color: #77bc1f;
+	}
+
+	#main-menu-container .copyright-right {
+		position: fixed;
+		right: 20px;
+		bottom: 12px;
+		/*padding-top: 10px;*/
+		font-family: norwester, serif;
+		font-size: 1em;
+		text-transform: uppercase;
+		color: white;
+	}
+
+#main-content {
+}
+
+	#montys-world {
+		margin-bottom: 60px;
+	}
+
+	#montys-world > h1 {
+		margin-bottom: 12px;
+	}
+
+	#montys-world > h2 {
+		margin-bottom: 60px;
+	}
+
+	#montys-world .character-container {
+		margin-bottom: 100px;
+		height: 357px;
+		background-image: url(../images/Underwater-tile.jpg);
+	}
+
+	/*#montys-world .character-container > img {
+		position: absolute;
+		top: 42px;
+		left: 50%;
+		transform: translateX(-50%);
+	}*/
+
+	#montys-world .scroll-icon-container {
+		display: none;
+	}
+
+	#features {
+		margin-bottom: 110px;
+	}
+
+	#features .character-container {
+		margin-bottom: 87px;
+		height: 309px;
+		background-image: url(../images/KAZ_2D_EIW_SFW_Textures-Grass.jpg);
+	}
+
+	#features > h2 {
+		margin-bottom: 26px;
+	}	
+
+	#game-play {
+		margin-bottom: 114px;
+	}
+
+	#game-play .slideshow-container {
+		position: relative;
+		margin-bottom: 95px;
+		height: 342px;
+		background-image: url(../images/dino-road-texture.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	#slideshow {
+		position: absolute;
+		top: 130px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	#slideshow li {
+		width: 335px; 
+		height: 252px;
+		list-style-type: none;
+	}
+
+	#slideshow li > img {
+		width: 100%;
+		height: auto;
+	}
+
+	#slideshow .bx-controls-direction a {
+		position: absolute;
+		top: -96px;
+		width: 60px;
+		height: 60px;
+		/*line-height: 0; 
+		font-size: 0;*/
+		color: transparent; 
+	}
+
+	#slideshow .bx-next {
+		left: 80px;
+		background: url(../images/arrow-right.svg) center no-repeat;
+	}
+
+	#slideshow .bx-next:hover {
+		transform: scale(1.1);
+		transition-duration: 0.4s;
+		background: url(../images/arrow-right-hover.svg) center no-repeat;
+	}
+
+	#slideshow .bx-prev {
+		background: url(../images/arrow-left.svg) center no-repeat;
+	}
+
+	#slideshow .bx-prev:hover {
+		transform: scale(1.1);
+		transition-duration: 0.4s;
+		background: url(../images/arrow-left-hover.svg) center no-repeat;
+	}
+
+	#slider-counter {
+		position: absolute;
+		top: -79px;
+		right: 0px;
+		font-family: "HVD Comic Serif Pro", serif;
+		font-size: 1.43em;
+		color: white;
+	}
+
+	#slider-counter .slash {
+		margin: 0 10px;
+	}
+
+	#about-us {
+		margin-bottom: 121px;
+	}
+
+	#about-us .character-container {
+		margin-bottom: 95px;
+		height: 375px;
+		background-image: url(../images/tropical-sand.jpg);
+	}
+
+	#about-us > h2 {
+		margin-bottom: 26px;
+	}
+
+	#about-us .description {
+		margin-bottom: 61px;
+	}
+
+	#about-us .logos {
+		text-align: center;
+	}
+
+	#about-us .logos > :first-child {
+		margin-right: 44px;
+	}
+
+#footer {
+	padding: 10px 20px;
+	background-image: url(../images/KAZ_2DEIW_SWTextures_02.jpg);
+}
+
+	#footer .logo {
+		display: block;
+		margin: 50px 0 60px 0;
+		text-align: center;
+	}
+
+	#footer .logo:hover {
+		transform: scale(1.1);
+		transition-duration: 0.4s;
+	}
+
+	#footer .badges {
+		margin-bottom: 20px;
+	}
+
+	#footer .social-icons {
+		margin-bottom: 60px;
+		text-align: center;
+		list-style-type: none;
+	}
+
+	#footer .social-icons li {
+		display: inline-block;
+		margin-right: 20px;
+		width: 34px;
+		height: 34px;
+	}
+
+	#footer .social-icons li > a > img {
+		border-radius: 50%;
+		padding: 9px;
+		background-color: #77bc1f;
+	}
+
+	#back-to-top-container {
+		text-align: center;
+		margin-bottom: 60px;
+	}
+
+	#back-to-top-container > a {
+		font-family: "HVD Comic Serif Pro", serif;
+		text-decoration: none;
+		color: white;
+		font-size: 1.35em;
+	}
+
+	#back-to-top-container > a > img:hover {
+		transform: scale(1.1);
+		transition-duration: 0.4s;
+		/*background: url(../images/arrow-up-hover.svg) center no-repeat;*/
+	}
+
+	#back-to-top-container > a > :first-child {
+		margin-right: 18px;
+		vertical-align: middle;
+	}
+
+	#footer .copyright {
+		color: white;
+	}
+
+	#footer .copyright-left {
+		font-family: Raleway, serif;
+		font-size: 0.73em;
+	}
+
+	#footer .copyright-right {
+		font-family: norwester, serif;
+		font-size: 1em;
+		text-transform: uppercase;
+	}
+
+@media only screen and (min-width: 1400px)
+{
+	.badges {
+		text-align: left;
+	}
+
+	.badges > * > img {
+		width: 230px;
+		height: auto;
+	}
+
+	#wrapper {
+		position: relative;
+	}
+
+	#header {
+		position: absolute;
+		padding: 50px;
+		width: 100%;
+	}
+		#menu-open,
+		#menu-close {
+			filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+		}
+
+		#menu-open > img,
+		#menu-close > img {
+			width: 50px;
+			height: 50px;
+			filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+		}
+
+		#main-menu-container .header {
+			padding: 50px 50px 20px;
+		}
+
+		#main-nav {
+			margin-bottom: 100px;
+		}
+
+		#main-nav li {
+			margin-bottom: 43px;
+		}
+
+		#main-nav a {
+			font-size: 2.7em;
+			line-height: normal;
+		}
+
+		#main-menu-container .badges {
+			margin-bottom: 0;
+			text-align: center;
+		}
+
+		#main-menu-container .social-icons {
+			position: fixed;
+			top: 50%;
+			left: 50px;
+			bottom: initial;
+			transform: translateY(-50%);
+			width: 34px;
+		}
+
+		#main-menu-container .social-icons li {
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+
+		#main-menu-container .copyright-right {		
+			right: 50px;
+			bottom: 12px;
+		}
+
+	#main-content {		
+	}
+
+		#main-content > * {
+			margin-bottom: 0;
+			height: 768px;
+		}
+
+		#main-content > * > .col{
+			float: right;
+			height: 100%;
+		}
+
+		#main-content > * > .col-right{
+			width: 42%;
+		}
+
+		#main-content > * > .col-left{
+			width: 43.6%;
+		}
+
+		#montys-world .character-container,
+		#features .character-container,
+		#game-play .slideshow-container,
+		#about-us .character-container {
+			margin-bottom: 0;
+		}
+
+		#features > .col > h2,
+		#game-play > .col > h2,
+		#about-us > .col > h2 {
+			margin-bottom: 34px;
+			font-size: 2.86em;
+			text-align: left;
+		}
+
+		#features .description,
+		#about-us .description {
+			padding-left: 0;
+			width: 486px;
+			font-size: 1.07em;
+			line-height: 2em;
+		}
+
+		#montys-world {
+			position: relative;
+		}
+
+		#montys-world h1, #montys-world h2 {
+			position: absolute;
+		}
+
+		#montys-world h1 {
+		    top: 149px;
+			left: 14.3%;
+			width: 489px;
+    		font-size: 6.34em;
+		}
+
+		#montys-world h2 {
+			top: 378px;
+			left: 14.3%;
+    		font-size: 2.85em;
+		}
+
+		#montys-world .character-container {
+			z-index: -1;
+		}
+
+		#montys-world .character-container > img {
+			top: 98px;
+			left: -52px;
+			width: 418px;
+			height: 538px;
+			transform: none;
+		}
+
+		#montys-world .badges {
+			margin-bottom: 40px;
+			padding-top: 516px;
+			padding-left: 3%;
+		}
+
+		#montys-world .scroll-icon-container {
+			display: block;
+			padding-left: 30%;
+		}
+
+		#montys-world .scroll-icon {
+			position: relative;
+		}
+
+		#montys-world .scroll-icon-circle {
+			position: absolute;
+			top: 7px;
+			left: 10px;
+			animation: scroll-icon-circle-up-down 4s linear;
+			animation-iteration-count: infinite;
+		}
+
+		#montys-world .scroll-icon-text {
+			/*display: block;*/
+			margin-left: -19px;
+			font-family: "HVD Comic Serif Pro", serif;
+			font-size: 1.43em;
+			color: #f6b221;
+		}
+
+		#features .character-container > img {
+			top: 133px;
+			left: -82px;
+			width: 542px;
+			height: 490px;
+			transform: none;
+		}
+
+		#features > .col {
+			padding-top: 155px;
+		}
+
+		#game-play > .col > h2 {
+			padding-top: 361px;
+		}
+
+		#slideshow {
+			margin-top: 29px;
+			margin-left: -203px;
+		}
+
+		#slideshow li {
+			width: 590px;
+			height: 443px;
+		}
+
+		#slideshow .bx-controls-direction a {
+			top: 470px;
+    		left: 199px;
+		}
+
+		#slider-counter {
+			top: 470px;
+		}
+
+		/* to increase specificity */
+		#slideshow .bx-controls-direction a.bx-next {
+			left: 282px;
+		}
+
+		#about-us .character-container > img {
+			top: 103px;
+			left: -68px;
+			width: 420px;
+			height: 535px;
+			transform: none;
+		}
+
+		#about-us > .col {
+			padding-top: 155px;
+		}
+
+		#about-us .logos {
+			padding-left: 66px;
+			text-align: left;
+		}
+
+		#about-us .logos > :first-child {
+			margin-right: 55px;
+		}
+
+		#about-us .cypha-logo {
+			width: 122px;
+			height: 85px;
+		}
+
+		#about-us .cheeky-logo {
+			width: 171px;
+			height: 111px;
+		}
+
+	#footer {
+		padding: 20px 50px;	
+	}
+
+		#footer .logo {
+			margin-top: 151px;
+			margin-bottom: 98px;
+		}
+
+		#footer .logo > img {
+			width: 392px;
+			height: 152px;
+		}
+
+		#footer .badges {
+			text-align: center;
+		}
+
+		#footer .social-icons {
+			position: fixed;
+			top: 323px;
+			width: 34px;
+		}
+
+		#footer .social-icons > * {
+			margin-bottom: 10px;
+		}
+
+		#back-to-top-container {
+			margin-bottom: 113px;
+		}
+}
+
+@keyframes scroll-icon-circle-up-down {
+	0% {
+		top: 7px;
+	}
+
+	50% {
+		top: 27px;
+	}
+
+	100% {
+		top: 7px;
+	}
+}
