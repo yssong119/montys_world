@@ -99,6 +99,8 @@ li {
 	padding: 0 20px;
 	color: #1c1c1c;
 	line-height: 1.86em;
+	max-width: 486px;
+	margin: 0 auto;
 }
 
 #wrapper {
@@ -521,7 +523,8 @@ li {
 
 		#main-content > * {
 			margin-bottom: 0;
-			height: 768px;
+			/*height: 768px;*/
+			height: 100vh;
 		}
 
 		#main-content > * > .col{
@@ -554,8 +557,9 @@ li {
 
 		#features .description,
 		#about-us .description {
+			margin-left: 0;
 			padding-left: 0;
-			width: 486px;
+			/*width: 486px;*/
 			font-size: 1.07em;
 			line-height: 2em;
 		}
